@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12AA1935-F782-48F0-9147-7C0622ED93EA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rinex_Tools_7</RootNamespace>
+    <AssemblyName>Rinex Tools 7</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>octicons_f060%280%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2-Rinex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2-Rinex.Designer.cs">
+      <DependentUpon>2-Rinex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3-Merge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3-Merge.Designer.cs">
+      <DependentUpon>3-Merge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4-Compare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4-Compare.Designer.cs">
+      <DependentUpon>4-Compare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5-Decimate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5-Decimate.Designer.cs">
+      <DependentUpon>5-Decimate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7-Crinex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7-Crinex.Designer.cs">
+      <DependentUpon>7-Crinex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="1-Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1-Welcome.Designer.cs">
+      <DependentUpon>1-Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6-SortData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6-SortData.Designer.cs">
+      <DependentUpon>6-SortData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="1-Welcome.resx">
+      <DependentUpon>1-Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2-Rinex.resx">
+      <DependentUpon>2-Rinex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3-Merge.resx">
+      <DependentUpon>3-Merge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4-Compare.resx">
+      <DependentUpon>4-Compare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5-Decimate.resx">
+      <DependentUpon>5-Decimate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6-SortData.resx">
+      <DependentUpon>6-SortData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7-Crinex.resx">
+      <DependentUpon>7-Crinex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teqc.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="octicons_f060%280%29.ico" />
+    <None Include="Resources\rnx2crx.exe" />
+    <None Include="Resources\crx2rnx.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
